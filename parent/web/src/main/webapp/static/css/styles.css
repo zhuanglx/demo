@@ -1,0 +1,17 @@
+body{ 
+	font-size:12px; 
+} 
+table{ 
+	table-layout:fixed; 
+	empty-cells:show; 
+	border-collapse: collapse; 
+	margin:0 auto;
+	font-size:12px; 
+}
+td{
+	height:20px; 
+}
+#container{
+	text-align: center;
+}
+

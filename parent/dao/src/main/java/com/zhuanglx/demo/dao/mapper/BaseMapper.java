@@ -1,10 +1,9 @@
 package com.zhuanglx.demo.dao.mapper;
 
 import java.util.List;
-
-import com.zhuanglx.demo.common.page.Page;
+import java.util.Map;
 
 public interface BaseMapper<T1,T2> {
-    public List<T2> query(Page<T1,T2> page) throws Exception;
-    public Long totalCount(Page<T1,T2> page) throws Exception;
+    public List<T2> find(Map<String, Object> params) throws Exception;
+    public Long totalCount(Map<String, Object> params) throws Exception;
 }

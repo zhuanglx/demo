@@ -3,6 +3,8 @@ package com.zhuanglx.demo.common.page;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 /**
  * 
  * @author zhuanglinxiang
@@ -16,8 +18,8 @@ public class Page<T1,T2> {
 	private long pageTotal = 0;
 	private long resultTotal = 0;
 	private long startIndex = 0;
-	private T1 query;
-	private List<Order> orderBy = new ArrayList<Order>();
+	private T1 query = null;
+	private List<Order> orderBy = null;
 	private List<T2> result = new ArrayList<T2>();
 
 	public Page() {
@@ -182,6 +184,9 @@ public class Page<T1,T2> {
 	}
 
 	public void setOrderBy(List<Order> orderBy) {
+		if(orderBy!=null && orderBy.size()==0){
+			orderBy = null;
+		}
 		this.orderBy = orderBy;
 	}
 

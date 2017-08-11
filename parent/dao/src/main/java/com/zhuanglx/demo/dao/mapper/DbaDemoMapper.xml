@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.demo.dba.mapper.DbaDemoMapper">
+	
+    <select id="query" parameterType="Page<DbaVo,DbaDto>" resultType="com.zhuanglx.demo.common.dto.DbaDto"> 
+    	select * from t_dba t where 1=1 
+    	<if test="query.xxx != null">
+        		and t.xxx like CONCAT('%',#{query.xxx},'%')
+        </if>
+        <if test="query.yyy != null">
+        		and t.yyy like CONCAT('%',#{query.yyy},'%')
+        </if>
+    	<if test="page != null">
+        		limit #{page.startIndex}, #{page.pageSize}
+        </if>
+    </select>
+    <select id="totalCount" parameterType="Page<DbaVo,DbaDto>" resultType="long">
+        select count(*) from t_dba t where 1=1  
+    </select>
+
+</mapper>

@@ -1,5 +1,7 @@
 package com.zhuanglx.demo.common.vo;
 
-public class DbaVo {
+import com.zhuanglx.demo.common.dto.DbaDto;
+
+public class DbaVo extends DbaDto{
 
 }

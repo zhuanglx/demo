@@ -109,7 +109,7 @@
    
     <!-- 扫描包中的mapper类 注意这里使用了sqlSessionFactoryBeanName -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.demo.dba.mapper"></property>
+        <property name="basePackage" value="com.zhuanglx.demo.dao.mapper"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryDba"></property>
     </bean>       
      
@@ -123,7 +123,7 @@
    
     <!-- 扫描包中的mapper类 注意这里使用了sqlSessionFactoryBeanName -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.demo.dbb.mapper"></property>
+        <property name="basePackage" value="com.zhuanglx.demo.dao.mapper"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryDbb"></property>
     </bean>  
     
@@ -138,9 +138,9 @@
     <mvc:annotation-driven/>    
     
     <!-- 扫描包中所有@Controller注解的类 -->     
-    <context:component-scan base-package="com.demo.controller" />
+    <context:component-scan base-package="com.zhuanglx.demo.web.controller" />
     <!-- 扫描包中所有@Service注解的类 -->
-    <context:component-scan base-package="com.demo.service,com.demo.task" />
+    <context:component-scan base-package="com.zhuanglx.demo.service,com.zhuanglx.demo.web.task" />
   
     <!-- 配置视图解析器 -->
     <bean

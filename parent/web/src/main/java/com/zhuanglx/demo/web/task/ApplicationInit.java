@@ -11,13 +11,13 @@ public class ApplicationInit implements ServletContextAware {
 	private Logger logger = Logger.getLogger(this.getClass());
 	public void setServletContext(ServletContext context) {
 		logger.info("application starting ...");
-		logger.info("########################");
-		logger.info("########################");
-		logger.info("########################");
-		logger.info("###### * init * ########");
-		logger.info("########################");
-		logger.info("########################");
-		logger.info("########################");
+		logger.info("########################/n"
+				+ "########################/n"
+				+ "########################/n"
+				+ "###### * init * ########/n"
+				+ "########################/n"
+				+ "########################/n"
+				+ "########################");
         String ctxPath=context.getContextPath();  
         context.setAttribute("ctxPath",ctxPath);  
        

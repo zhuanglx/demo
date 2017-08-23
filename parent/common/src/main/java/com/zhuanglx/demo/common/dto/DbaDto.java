@@ -1,6 +1,6 @@
 package com.zhuanglx.demo.common.dto;
 
-public class DbaDto {
+public class DbaDto extends BaseDto{
 	private Integer id;
 	private String xxx;
 	private String yyy;
